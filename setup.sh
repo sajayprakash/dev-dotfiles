@@ -41,6 +41,9 @@ rm -rf ~/miniconda3/miniconda.sh
 # Reload the shell
 exec zsh
 
+# Prevent miniconda from auto activating env
+conda config --set auto_activate_base false
+
 # Finalize
 echo -e "${BLUE}Complete the following steps to finalize the setup:${NC}"
 echo -e "${YELLOW}Set 'plugins=(zsh-autosuggestions zsh-syntax-highlighting)' in ~/.zshrc"

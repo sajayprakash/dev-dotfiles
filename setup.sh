@@ -44,8 +44,15 @@ exec zsh
 # Prevent miniconda from auto activating env
 conda config --set auto_activate_base false
 
+# Setup Git
+git config --global user.email "sajayprakashk@gmail.com"
+git config --global user.name "Sajay Prakash"
+
+# Install Node LTS
+fnm install --lts
+
 # Finalize
 echo -e "${BLUE}Complete the following steps to finalize the setup:${NC}"
 echo -e "${YELLOW}Set 'plugins=(zsh-autosuggestions zsh-syntax-highlighting)' in ~/.zshrc"
-echo -e "${YELLOW}Setup fnm using 'fnm install --lts'${NC}"
+echo -e "${YELLOW}Setup fnm using 'fnm use'${NC}"
 echo -e "${YELLOW}Setup gh cli using 'gh auth login -s delete_repo'${NC}"
